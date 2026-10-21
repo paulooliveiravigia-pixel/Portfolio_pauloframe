@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Serviços de Fotografia e Precários - paulo.frames">
+    <title>Serviços | paulo.frames</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+      <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagens/logo.png" alt="paulo.frames" class="logo-img">
+            </a>
+        </div>
+
+        <!-- Botão de Hambúrguer para telemóvel -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                
+                <!-- GALERIA COM MENU DROPDOWN -->
+                <li class="dropdown">
+                    <a href="galeria.html">Galeria ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="concertos.html">Concertos</a></li>
+                        <li><a href="retratos.html">Retratos</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="servicos.html" class="ativo">Serviços</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal dos Serviços -->
+    <main class="main-content-servicos">
+        
+        <section class="servicos-intro">
+            <h2>Serviços</h2>
+            <p>Escolhe o tipo de cobertura fotográfica ideal para o teu projeto ou evento.</p>
+        </section>
+
+        <!-- Cartões de Serviços-->
+        <div class="servicos-grid">
+            
+            <!-- Cartão 1: Concertos -->
+            <div class="servico-card">
+                <!-- Ícone com Link para a Galeria de Concertos -->
+                <a href="concertos.html" class="servico-icone" title="Ver galeria de concertos">
+                    <!-- Ícone de Música / Concerto -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </a>
+                
+                <h3>Cobertura de Concertos</h3>
+                <p class="servico-descricao">Acompanhamento de bandas e artistas em palco ou festivais.</p>
+                
+                <a href="contactos.html" class="servico-preco">Preços sob consulta</a>
+            </div>
+
+            <!-- Cartão 2: Sessões -->
+            <div class="servico-card">
+                <!-- Ícone com Link para a Galeria de Retratos -->
+                <a href="retratos.html" class="servico-icone" title="Ver galeria de retratos">
+                    <!-- Ícone de Pessoa / Utilizador -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </a>
+                
+                <h3>Sessões de Pessoas</h3>
+                <p class="servico-descricao">Retratos individuais, artísticos, em casal, etc.,...<br>1h30 de sessão</p>
+                
+                <a href="contactos.html" class="servico-preco">Preços sob consulta</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 paulo.frames. Todos os direitos reservados.</p>
+        <a href="https://www.instagram.com/paulo.frame/" target="_blank" aria-label="Instagram">
+            <!-- Ícone SVG do Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            Instagram
+        </a>
+    </footer>
+
+    <!-- Script Menu Telemóvel -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('ativo');
+        });
+    </script>
+</body>
+</html>

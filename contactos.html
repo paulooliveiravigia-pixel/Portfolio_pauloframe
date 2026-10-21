@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactos e Orçamentos - paulo.frames">
+    <title>Contactos | paulo.frames</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagens/logo.png" alt="paulo.frames" class="logo-img">
+            </a>
+        </div>
+
+        <!-- Botão de Hambúrguer para telemóvel -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                
+                <!-- GALERIA COM MENU DROPDOWN -->
+                <li class="dropdown">
+                    <a href="galeria.html">Galeria ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="concertos.html">Concertos</a></li>
+                        <li><a href="retratos.html">Retratos</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contactos.html" class="ativo">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal de Contactos -->
+    <main class="main-content-contactos">
+        
+        <!-- Caixa do Formulário -->
+        <div class="contactos-container-card">
+            <div class="contactos-intro">
+                <h2>Vamos Trabalhar Juntos?</h2>
+                <p>Preenche o formulário para agendar concertos ou sessões de retratos.</p>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contactos-form">
+
+                <!-- COLA A TUA ACCESS KEY DO WEB3FORMS AQUI EMBAIXO -->
+                <input type="hidden" name="access_key" value="ae230e49-4eb6-4f9c-a312-10a00cc5289a">
+
+                <div class="form-group">
+                    <label for="nome">Nome / Banda *</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem / Detalhes do Projeto</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+
+                <!-- Campo anti-spam oculto obrigatório do Web3Forms -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <button type="submit" class="btn-cta">Enviar Mensagem</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 paulo.frames. Todos os direitos reservados.</p>
+        <a href="https://www.instagram.com/paulo.frame/" target="_blank" aria-label="Instagram" style="color: #cccccc; margin-left: 15px; text-decoration: none; display: inline-flex; align-items: center; vertical-align: middle; transition: color 0.3s;">
+            <!-- Ícone SVG do Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+    </footer>
+
+    <!-- Script Menu Telemóvel -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('ativo');
+        });
+    </script>
+</body>
+</html>
